@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>中国铁路12306-用户注册</title>
+		<style type="text/css">
+		    c1
+			{
+		        color: red;
+		    }
+		    c2
+			{
+		        color: #FF7F50;
+		    }
+		    c3
+			{
+		       font-size: large;
+		    }
+		    c4
+			{
+		       font-size: small;
+		    }
+		    c5
+			{
+		        text-decoration: underline;
+		        color: coral;
+		     }
+		    c6
+			{
+		        text-align: center;
+	      	}
+		    c7{
+		       text-align: left;
+		       color: red;
+		       font-size: large;
+		    }
+		    c8
+			{
+		       font-weight: bold;
+		    }  
+		</style>
+	</head>
+	<body>
+         <form>
+			<c4>
+            <table border="0" cellpadding="1" cellspacing="0" >
+                <tr  height="35">
+                <c7>账户信息</c7>
+                </tr>
+                <tr  height="35">
+                    <td align="right" width="100"><c1>*</c1><c8>用户名:</c8></td>
+                    <td width="190" align="center"><input type="text" style="width: 180px; height: 27px;" placeholder="设置成功后不可修改" /></td>
+                    <td align="left" width="350"><c2>6-30位字母、数字或“_”，字母开头</c2></td>
+                </tr>
+                <tr height="35">
+                    <td align="right" width="100"><c1>*</c1><c8>登录密码：</c8></td>
+                    <td width="190" align="center"><input type="password" style="width: 180px; height: 27px;" placeholder="6-20位字母、数字或符号" /></td>
+                    <td width="350"></td>
+                </tr>
+                <tr height="35">
+                    <td align="right" width="100"><c1>*</c1><c8>确认密码：</c8></td>
+                    <td width="190" align="center"><input type="password" style="width: 180px; height: 27px;" placeholder="再次输入您的登录密码" /></td>
+                    <td width="350"></td>
+                </tr>
+                <tr height="35">
+                    <td align="right" width="100"><c1>*</c1><c8>证件类型：</c8> </td>
+                    <td width="190" align="center"> 
+                        <select style="width: 184px; height: 32px;">
+                            <option>中国居民身份证</option>
+                            <option>港澳居民来往内地通行证</option>
+                            <option>台湾居民来往大陆通行证</option>
+                            <option>护照</option>
+                        </select>
+                    </td>
+                    <td width="350"></td>
+                </tr>
+				<tr >
+					<td width="350"></td>
+					<td input type="radio" name="gender">中国居民身份证 
+					</td>
+					<td width="350"></td>
+				</tr>
+				<tr >
+					<td width="350"></td>
+					<td input type="radio" name="gender">外国人永久居留身份证
+					</td>
+					<td width="350"></td>
+				</tr>
+				<tr >
+					<td width="350"></td>
+					<td input type="radio" name="gender">港澳台居民居住证
+					</td>
+					<td width="350"></td>
+				</tr>
+                <tr height="35">
+                    <td align="right" width="100"><c1>*</c1><c8>姓名：</c8></td>
+                    <td width="190" align="center"><input type="text" style="width: 180px; height: 27px;" placeholder="请输入姓名" /></td>
+                    <td align="left" width="350"><c5>姓名填写规则</c5><c2>(用于身份核验，请正确填写)</c2></td>
+                </tr>
+                <tr height="35">
+                    <td align="right" width="100"><c1>*</c1><c8>证件号码：</c8></td>
+                    <td width="190" align="center"><input type="text" style="width: 180px; height: 27px;" placeholder="请输入您的证件号码" /></td>
+                    <td align="left" width="350"> <c2>(用于身份核验，请正确填写)</c2></td>
+                </tr>
+                <tr height="35">
+                    <td align="right" width="100"><c8>邮箱：</c8></td>
+                    <td width="190" align="center"><input type="text" style="width: 180px; height: 27px;" placeholder="请正确填写邮箱地址" ></td>
+					<td width="350"></td>
+				</tr>
+		        <tr height="35">
+					<td align="right" width="100"><c1>*</c1><c8>手机号码(+86)：</c8> </td>
+				    <td width="190" align="center"><input type="text" style="width: 180px; height: 27px;" placeholder="请输入您的手机号码" ></td>
+				    <td align="left" width="350"> <c2>请正确填写手机号码，稍后将向该手机号码发送短信验证码</c2></td>
+				</tr>
+		        <tr height="35">
+		            <td align="right" width="100"><c1>*</c1><c8>旅客类型：</c8></td>
+		            <td width="190" align="center">
+		                <select style="width: 184px; height: 32px;">
+		                   <option>成人</option>
+		                   <option>儿童</option>
+		                   <option>学生</option>
+		                   <option>残疾军人，伤残人民警察</option>
+		                </select></td>
+		            <td align="left" width="350"></td>
+		        </tr>
+		        <tr height="30">
+		            <td></td>
+		            <td colspan="2"><input type="checkbox" name="1" value="我已阅读并同意遵守" />我已阅读并同意遵守   
+					    <a href="https://kyfw.12306.cn/otn/regist/rule"><font color="blue">《中国铁路客户服务中心网站服务条款》</font></a> 
+					    <a href="https://kyfw.12306.cn/otn/gonggao/privacyPolicy_web.html;jsessionid=7892263723FACF2787FC836951AF303B"><font color="blue">《隐私权政策》</font></a></td>
+		        </tr>
+		        <tr height="80">
+		            <td></td>
+		            <td align="center"><input type="submit" value="下一步" style="background-color: #FF7F50; color: floralwhite; width: 100px; height: 30px; border: medium;"/></td>
+		            <td></td>
+		        </tr>
+		    </table> 
+			</c4>
+		</form> 
+	</body>
+</html>
+
+
+  
+   
