@@ -11,11 +11,30 @@
 			 
 			<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 			<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	        <script>
+				//定义一个韩式，完成存款的计算
+				function calc(){
+					//1.获取存款金额（读取文本框里用户输入的数字）
+					var cunkuanjine = document.getElementById("amount").value;
+					    //上面这句话取到的值是：“8000”，是字符串。
+					    //“8000”->8000
+					var cunkuannum=parseInt(cunkuanjine);//字符串转成整数
+					//2.开始计算
+					    //取得年利率
+					var lilv = document.getElementById("year").value;
+					 // var lilvnum = parseInt(lilv);
+					var lixi = cunkuannum * lilv; //利息
+					var total = cunkuannum + lixi; //本息合计
+					//3.把计算的结果写入相应的文本框,用户就能看到
+					document.getElementById("lixi").value = lixi;
+					document.getElementById("total").value = total;
+				}
+			</script>
 	</head>
 	<body>
 		<div class="container text-center" >
 		    <h1>个人银行-个人存款计算</h1>
-			<table class="table table-bordered text-center">
+			<table class="table table-bordered text-center ">
 				<tr class="bg-primary">
 					<td colspan="2">个人存款计算器</td>
 				</tr>
@@ -39,7 +58,7 @@
 				<tr>
 					<td>所得利息</td>
 					<td>
-						<input type="text" class="form-control" readonly="readonly"><!-- 只读 -->
+						<input type="text"  id="lixi" class="form-control" readonly="readonly"><!-- 只读 -->
 					</td>
 				</tr>
 				<tr>
@@ -50,7 +69,7 @@
 				</tr>
 				<tr>
 					<td colspan="2">
-						<button class="btn btn-primary btn-block">计算</button>
+						<button onclick="calc()" class="btn btn-primary btn-block">计算</button>
 					</td>
 				</tr>
 			</table>
