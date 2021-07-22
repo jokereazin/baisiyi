@@ -1,0 +1,162 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>无标题文档</title>
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
+		<link href="css/select.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/jquery.idTabs.min.js"></script>
+		<script type="text/javascript" src="js/select-ui.min.js"></script>
+		<script type="text/javascript" src="editor/kindeditor.js"></script>
+
+		<script type="text/javascript">
+			KE.show({
+				id: 'content7',
+				cssPath: './index.css'
+			});
+		</script>
+
+		<script type="text/javascript">
+			$(document).ready(function(e) {
+				$(".select1").uedSelect({
+					width: 345
+				});
+				$(".select2").uedSelect({
+					width: 167
+				});
+				$(".select3").uedSelect({
+					width: 100
+				});
+			});
+		</script>
+		<script>
+			function checkUsername1() {
+				var uname1 = document.getElementById("username1").value;
+				var unameTip1 = document.getElementById("usernameTip1");
+				var reg = /^[\u4E00-\u9FA5A-Za-z]{2,30}$/;;
+				if (!reg.test(uname1)) {
+					unameTip1.innerHTML = "题目输入不合法！";
+					unameTip1.style = "color:red";
+				} else {
+					unameTip1.innerHTML = "";
+				}
+			}
+			function checkUsername2() {
+				var uname2 = document.getElementById("username2").value;
+				var unameTip2 = document.getElementById("usernameTip2");
+				var reg = /^[\u4E00-\u9FA5]{2,6}$/;;
+				if (!reg.test(uname2)) {
+					unameTip2.innerHTML = "组长输入不合法！";
+					unameTip2.style = "color:red";
+				} else {
+					unameTip2.innerHTML = "";
+				}
+			}
+			function checkUsername3() {
+				var uname3 = document.getElementById("username3").value;
+				var unameTip3 = document.getElementById("usernameTip3");
+				var reg = /^[\u4E00-\u9FA5]{2,6}$/;;
+				if (!reg.test(uname3)) {
+					unameTip3.innerHTML = "组员输入不合法！";
+					unameTip3.style = "color:red";
+				} else {
+					unameTip3.innerHTML = "";
+				}
+			}
+			function checkUsername4() {
+				var uname4 = document.getElementById("username4").value;
+				var unameTip4 = document.getElementById("usernameTip4");
+				var reg = /^[\u4E00-\u9FA5]{2,6}$/;;
+				if (!reg.test(uname4)) {
+					unameTip4.innerHTML = "指导老师输入不合法！";
+					unameTip4.style = "color:red";
+				} else {
+					unameTip4.innerHTML = "";
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+
+		<div class="place">
+			<span>位置：</span>
+			<ul class="placeul">
+				<li>
+					<a href="#">首页</a>
+				</li>
+				<li>
+					<a href="#">参赛信息录入</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="formbody">
+			<div id="tab1" class="tabson">
+				<ul class="forminfo">
+					<li><label>竞赛类别</label>
+						<div class="vocation">
+							<select class="select3">
+								<option>A类</option>
+								<option>B类</option>
+								<option>C类</option>
+							</select>
+						</div>
+					</li>
+					<li>
+						<label>年度<b>*</b></label>
+						<input placeholder="请输入日期" name="classid" type="text" class="dfinput" style="width:345px;" />
+					</li>
+					<li>
+						<label>题目<b>*</b></label>
+						<input onblur="checkUsername1()" id="username1" placeholder="2-30个汉字字母组合" name="Input" type="text" class="dfinput"
+							style="width:345px;" />
+							<i id="usernameTip1"></i>
+					</li>
+					<li>
+						<label>组长<b>*</b></label>
+						<input onblur="checkUsername2()" id="username2" placeholder="汉字2-6个" name="classid" type="text" class="dfinput" style="width:345px;" />
+					<i id="usernameTip2"></i>
+					</li>
+					<li>
+						<label>组员<b>*</b></label>
+						<input onblur="checkUsername3()" id="username3" placeholder="汉字2-6个" name="Input" type="password" class="dfinput" style="width:345px;" />
+					<i id="usernameTip3"></i>
+					</li>
+					<li><label>获奖等级</label>
+						<div class="vocation">
+							<select class="select3">
+								<option>无</option>
+								<option>特等奖</option>
+								<option>一等奖</option>
+								<option>二等奖</option>
+								<option>三等奖</option>
+								<option>优秀奖</option>
+							</select>
+						</div>
+					</li>
+					<li>
+						<label>指导老师<b>*</b></label>
+						<input onblur="checkUsername4()" id="username4" placeholder="汉字2-6个" name="Input" type="password" class="dfinput" style="width:345px;" />
+					<i id="usernameTip4"></i>
+					</li>
+					<li><label>&nbsp;</label><input name="" type="button" class="btn" value="保存参赛信息" /></li>
+				</ul>
+
+			</div>
+
+		</div>
+		<script type="text/javascript">
+			$("#usual1 ul").idTabs();
+		</script>
+
+		<script type="text/javascript">
+			$('.tablelist tbody tr:odd').addClass('odd');
+		</script>
+		</div>
+	</body>
+
+</html>
